@@ -5,15 +5,20 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext.startKoin
 
-class UserApp: Application() {
+class ImageApp: Application() {
+
+
     override fun onCreate() {
         super.onCreate()
 
         // Start Koin
         startKoin{
             androidLogger()
-            androidContext(this@UserApp)
-            modules(appModule)
+            androidContext(this@ImageApp)
+            modules(apiModule,
+                databaseModule,
+                repositoryModule,
+                viewModule)
         }
     }
 }

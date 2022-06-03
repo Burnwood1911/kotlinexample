@@ -1,12 +1,9 @@
 package com.example.exampleapp.api
 
-import com.example.exampleapp.models.User
-import retrofit2.Response
+import com.example.exampleapp.models.Image
 import retrofit2.http.GET
-import retrofit2.http.Path
-import retrofit2.http.Query
 
 interface MyApi {
-    @GET("/users/{id}")
-    suspend fun getUser(@Path("id") userId: Int) :User
+    @GET("/list")
+    suspend fun getImages() : List<Image>
 }
