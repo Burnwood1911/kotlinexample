@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">example app</string>
+    <string name="title_user_id">Enter User Identity</string>
+    <string name="title_query_user">Query User with ID</string>
 </resources>
